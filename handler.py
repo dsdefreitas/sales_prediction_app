@@ -5,7 +5,7 @@ from rossmann.Rossmann import Rossmann
 import os
 
 # loading model
-model = pickle.load( open("model\\model_rossman.plk", "rb") )
+model = pickle.load( open("model/model_rossman.plk", "rb") )
 
 # initialize API
 app = Flask( __name__ )
@@ -46,6 +46,5 @@ def rossmann_predict():
         return Reponse( '{}', status=200, mimetype='application/json' )
               
 if __name__ == '__main__':
-    print('chegou aqui')
     port = os.environ.get('PORT', 5000)
     app.run(host='0.0.0.0', port = port)
