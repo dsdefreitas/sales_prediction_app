@@ -13,7 +13,6 @@ app = Flask( __name__ )
 @app.route( '/rossmann/predict', methods=['POST'] )
 #Método post: que enviar algum dado pra poder receber
 #Método get: que pede alguma coisa.
-
 def rossmann_predict():
     test_json = request.get_json()
    
